@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { api, setToken, clearToken } from "../api/apiClient"; // din helper
 
+/**
+ *  Login side
+ * - bruger /Users/login endpoint
+ * - husk mig (localStorage/sessionStorage)
+ * - redirect til /bookings eller der hvor brugeren kom fra
+ *          
+ * @returns jsx
+ */
 export default function LoginPage() {
   const [username, setU] = useState("");
   const [password, setP] = useState("");
@@ -17,6 +25,7 @@ export default function LoginPage() {
   // Ryd evt. gammel auth-tilstand når man lander på login
   useEffect(() => { clearToken(); }, []);
 
+  // Simpel form validering
   function validate() {
     if (!username.trim()) return "Brugernavn er påkrævet.";
     if (!password.trim()) return "Kodeord er påkrævet.";
@@ -24,6 +33,16 @@ export default function LoginPage() {
     return "";
   }
 
+  /**
+   *    Håndter submit
+   *    - validering
+   *    kald /Users/login
+   *   gem token (localStorage/sessionStorage)
+   *    redirect        
+   *                  
+   * @param {*} e 
+   * @returns 
+   */
   async function onSubmit(e) {
     e.preventDefault();
     setError("");

@@ -1,5 +1,5 @@
 const API_URL = import.meta.env?.VITE_API_URL;
-console.log("API_URL", API_URL);
+
 if (!API_URL) throw new Error("Manglende VITE_API_URL i miljøet");
 const TOKEN_KEY = "access_token";
 

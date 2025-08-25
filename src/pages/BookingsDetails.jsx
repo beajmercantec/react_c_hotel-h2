@@ -3,6 +3,13 @@ import { useEffect, useState} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { api } from "../api/apiClient";
 
+/**
+ *  Booking detaljer side
+ * - bruger /bookings/:id endpoint
+ * - viser JSON data (råt)
+ * - fejl håndteres pænt  
+ * @returns jsx
+ */
 export default function BookingDetailsPage() {
   const { id } = useParams();              // <- param
   const nav = useNavigate();

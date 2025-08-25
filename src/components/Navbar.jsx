@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { api, clearToken } from "../api/apiClient";
 
+/**
+ *      Navbar komponent
+ * - viser bruger info (hentet fra /Users/me)
+ * - log ud knap (ryd token + redirect til /login)
+ * - responsive (hamburger menu på mobil)   
+ * @returns jsx
+ */
 export default function Navbar() {
   const [me, setMe] = useState(null);
   const [open, setOpen] = useState(false); // mobil-menu

@@ -3,6 +3,14 @@ import { api } from "../api/apiClient";
 import { useSearchParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+/**
+ * Bookings-side med søg, filtre, sort, pagination og detaljer i drawer
+ * - bruger /bookings endpoint
+ * - klik på række for detaljer (henter /bookings/:id)
+ * - link til fuld visning i drawer (/bookings/:id) 
+ *      
+ */
+
 /** Lille debounce-hook (så vi ikke kalder API for hvert tastetryk) */
 function useDebouncedValue(value, delay = 400) {
   const [v, setV] = useState(value);
@@ -39,7 +47,7 @@ export default function BookingsPage() {
   const [openId, setOpenId] = useState(null); // drawer booking id
   const mounted = useRef(true);
 
-  // Hent liste
+  // Hent data når søgning/filtre ændres
   useEffect(() => {
     mounted.current = true;
     const controller = new AbortController();
@@ -87,10 +95,11 @@ export default function BookingsPage() {
   const canPrev = page > 1;
   const canNext = page < totalPages;
 
+  // Nulstil filtre
   function resetFilters() {
     setQ(""); setStatus("all"); setFrom(""); setTo(""); setSort("-startDate"); setPage(1);
   }
-
+  // Vis detaljer i drawe
   return (
     <div className="space-y-5">
       {/* Hero / header */}
@@ -143,6 +152,7 @@ export default function BookingsPage() {
         </div>
       </div>
 
+        {/* Resultat af ovenstående søgning*/}    
      {/* KORT + TABEL WRAPPER */}
 <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow">
   {/* Header-række */}
@@ -332,7 +342,7 @@ function DetailDrawer({ id, onClose }) {
                 className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white shadow hover:bg-blue-700"
                 onClick={onClose} // luk drawer når man klikker
               >
-                Åbn fuld visning ↗
+              Åbn fuld visning ↗
               </Link>
             </div>
 
