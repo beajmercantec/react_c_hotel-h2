@@ -2,15 +2,15 @@
 ## Mapper
 src/
   api/            # fetch-wrapper, domæne-services (auth.js, bookings.js)</br>
-  components/     # genbrugelige UI-komponenter (Button, Card, Table, ...)
-  context/        # React Context (AuthContext, ThemeContext)
-  hooks/          # custom hooks (useApi, useDebouncedValue, ...)
-  pages/          # route-komponenter (Home.jsx, Me.jsx, Bookings.jsx, ...)
-  routes/         # rute-deklarationer, ProtectedRoute/RequireAuth
-  styles/         # global.css, tailwind.css, theming
-  utils/          # hjælpefunktioner (formatDate, money, ...)
-  App.jsx
-  main.jsx
+  components/     # genbrugelige UI-komponenter (Button, Card, Table, ...)</br>
+  context/        # React Context (AuthContext, ThemeContext)</br>
+  hooks/          # custom hooks (useApi, useDebouncedValue, ...)</br>
+  pages/          # route-komponenter (Home.jsx, Me.jsx, Bookings.jsx, ...)</br>
+  routes/         # rute-deklarationer, ProtectedRoute/RequireAuth</br>
+  styles/         # global.css, tailwind.css, theming</br>
+  utils/          # hjælpefunktioner (formatDate, money, ...)</br>
+  App.jsx</br>
+  main.jsx</br>
 
 **Principper:**
 
