@@ -1,16 +1,16 @@
 # Mapper & Principper
 ## Mapper
-src/
-  api/            # fetch-wrapper, domæne-services (auth.js, bookings.js)
-  components/     # genbrugelige UI-komponenter (Button, Card, Table, ...)
-  context/        # React Context (AuthContext, ThemeContext)
-  hooks/          # custom hooks (useApi, useDebouncedValue, ...)
-  pages/          # route-komponenter (Home.jsx, Me.jsx, Bookings.jsx, ...)
-  routes/         # rute-deklarationer, ProtectedRoute/RequireAuth
-  styles/         # global.css, tailwind.css, theming
-  utils/          # hjælpefunktioner (formatDate, money, ...)
-  App.jsx
-  main.jsx
+src/&nbsp;</br>
+  &nbsp;&nbsp;api/  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;         # fetch-wrapper, domæne-services (auth.js, bookings.js)</br>
+  &nbsp;&nbsp;components/ &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;   # genbrugelige UI-komponenter (Button, Card, Table, ...)</br>
+  &nbsp;&nbsp;context/   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;   # React Context (AuthContext, ThemeContext)</br>
+  &nbsp;&nbsp;hooks/     &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  # custom hooks (useApi, useDebouncedValue, ...)</br>
+  &nbsp;&nbsp;pages/     &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  # route-komponenter (Home.jsx, Me.jsx, Bookings.jsx, ...)</br>
+  &nbsp;&nbsp;routes/    &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  # rute-deklarationer, ProtectedRoute/RequireAuth</br>
+  &nbsp;&nbsp;styles/    &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  # global.css, tailwind.css, theming</br>
+  &nbsp;&nbsp;utils/      &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  # hjælpefunktioner (formatDate, money, ...)</br>
+  &nbsp;&nbsp;App.jsx</br>
+  &nbsp;&nbsp;main.jsx</br>
 
 **Principper:**
 
