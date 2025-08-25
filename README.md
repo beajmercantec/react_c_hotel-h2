@@ -19,6 +19,7 @@ src/
 - **Side-komponenter i pages/** ejer side-specifik logik (henter data, koordinerer børn).
 - **Context** kun når flere områder skal dele viden (auth, tema, sprog).
 
+# Streg tegninger
 
 
 
