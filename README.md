@@ -1,3 +1,28 @@
+# Mapper & Principper
+## Mapper
+src/
+  api/            # fetch-wrapper, domæne-services (auth.js, bookings.js)
+  components/     # genbrugelige UI-komponenter (Button, Card, Table, ...)
+  context/        # React Context (AuthContext, ThemeContext)
+  hooks/          # custom hooks (useApi, useDebouncedValue, ...)
+  pages/          # route-komponenter (Home.jsx, Me.jsx, Bookings.jsx, ...)
+  routes/         # rute-deklarationer, ProtectedRoute/RequireAuth
+  styles/         # global.css, tailwind.css, theming
+  utils/          # hjælpefunktioner (formatDate, money, ...)
+  App.jsx
+  main.jsx
+
+**Principper:**
+
+- **API-kald bor i api/**, ikke spredt i komponenter.
+- **Præsentationskomponenter i components/** skal være rene og testbare.
+- **Side-komponenter i pages/** ejer side-specifik logik (henter data, koordinerer børn).
+- **Context** kun når flere områder skal dele viden (auth, tema, sprog).
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
