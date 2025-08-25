@@ -1,7 +1,7 @@
 # Mapper & Principper
 ## Mapper
 src/
-  api/            # fetch-wrapper, domæne-services (auth.js, bookings.js)
+  api/            # fetch-wrapper, domæne-services (auth.js, bookings.js)</br>
   components/     # genbrugelige UI-komponenter (Button, Card, Table, ...)
   context/        # React Context (AuthContext, ThemeContext)
   hooks/          # custom hooks (useApi, useDebouncedValue, ...)
